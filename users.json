@@ -1,0 +1,16 @@
+{
+    "ru7a.1250@gmail.com": {
+        "id": "user_68fe67ae3be83",
+        "fullname": "مستخدم جديد",
+        "email": "ru7a.1250@gmail.com",
+        "password": "$2y$10$s5zT6pk7fyGHxmOWNdPkSuiI3t70kG8yZR9qAjri4X35C6peVN10u",
+        "created_at": "2025-10-26 19:25:50"
+    },
+    "user@example.com": {
+        "id": "user_68fe787fc55c8",
+        "fullname": "ruba",
+        "email": "user@example.com",
+        "password": "$2y$10$zJjVBRDPxcrnSywoxb0QiOTMnW9JTZNqHY30c7rwoakAvZZP7UvRa",
+        "created_at": "2025-10-26 20:37:35"
+    }
+}

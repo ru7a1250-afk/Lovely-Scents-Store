@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lovley Scents Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!--  <script src="cart.js"></script> 
+ <script src="perfumestoresystem.js"></script> -->
+    <script src="searsh.js"></script>
+    <script src="auth-system.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        /* إضافة خاصية الانزلاق الناعم عند الضغط على الروابط */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: #ea70b1;
+            --secondary-color: #a20087;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+
+        .footer {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .footer a:hover {
+            color: var(--light-color) !important;
+            text-decoration: underline !important;
+            transform: translateY(-2px);
+        }
+
+        .social-link:hover {
+            color: var(--light-color) !important;
+            transform: translateY(-3px) scale(1.2);
+        }
+
+        @media (max-width: 992px) {
+            .footer .row.justify-content-around>div {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 30px 0 15px;
+            }
+
+            .footer .row.justify-content-around>div {
+                margin-bottom: 25px;
+            }
+
+            .social-links {
+                gap: 25px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer {
+                padding: 25px 0 10px;
+            }
+
+            .footer h6 {
+                font-size: 15px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .footer a,
+            .footer div {
+                font-size: 13px !important;
+            }
+
+            .social-links {
+                gap: 20px !important;
+            }
+
+            .social-link {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid p-0 vh-100" style="background-image: url(images/xxxx.jpg);
+        background-size:cover;
+        background-position:center; 
+         height: 60vh;
+         width: 100%;
+         color: aliceblue (0, 0, 0, 0.4) ;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+          position: absolute;
+          margin-top: -0px ;
+          margin-bottom: -50px !important;
+          padding: 10px;
+        transform: translateY(-30px) scaleY(0.7);
+    transform-origin: top center;
+    max-width: 2000px; 
+     "></div>
+
+    <div class="text-center "
+        style="color:#fcfcfc; position: relative; z-index: 2; font-family: 'Cairo', sans-serif;  margin-top: 130px;  text-shadow: 2px 2px 8px rgba(162, 0, 135, 0.5); ">
+        <h1 class="display-6 fw-bold " style="font-size: 35px;"> Lovely Scents Store مرحبا بكم في </h1>
+        <h5 class="lead mt-3  fw-bold " style=" color:#ffffff ; text-shadow: 1px 1px 2px  rgba(162, 0, 135, 0.5);">تجربة
+            فريدة من العطور لا تُنسى في انتظارك</h5>
+        
+        <!-- التعديل هنا: ربط الزر بقسم المنتجات عبر href="#perfumes-section" -->
+        <a href="#perfumes-section">
+            <button class="btn btn-light mt-4"
+                style="color: #ffffff;  text-shadow: 2px 2px 8px rgba(162, 0, 135, 0.5);  background-color: rgb(234, 112, 177);  ">انطلق
+                الآن</button>
+        </a>
+    </div>
+
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 75vh; 
+                background: rgba(255, 255, 255, 0.3); z-index: 1;"></div>
+    <header>
+        <div class="d-flex align-items-center">
+            <!-- الصورة الدائرية -->
+            <img src="images/orr.jpg" alt="متجر أيقونة" class="rounded-circle me-2"
+                style="width: 40px; height: 40px; object-fit: cover;">
+
+            <!-- اللوقو أو اسم المتجر -->
+            <span class="navbar-brand mb-0 h3" style=" font-size: 22px; font-weight: bold;
+            color: white;
+            font-style: italic;
+              padding: 10px;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+          white-space: nowrap;
+          padding-left: 0px;
+          padding-right: 30px;
+          letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(162, 0, 135, 0.5);">Lovely Scents Store</span>
+        </div>
+
+
+
+        <div class="header-actions">
+            <div class="icon-wrapper">
+
+
+                <div class="d-flex gap-3">
+                    <button class="icon-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <button class="icon-btn ">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+
+
+
+
+                    <button class="icon-btn" id="cart-toggle">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+
+    </header>
+
+    <!-- التعديل هنا: إضافة id="perfumes-section" للوصول إليه عند الضغط على الزر -->
+    <div class="container" id="perfumes-section">
+        <div class=" row  ">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="product-card ">
+                    <img width="300px" height="300px" src="images/pert.jpg" alt="Perfume" class="product-image">
+
+                    <div class="product-info">
+                        <!--- تطبيق فئة product-title على العنوان -->
+                        <h2 class="product-title"> Rose Éclat</h2>
+
+                        <!---  /  تطبيق فئة description على الوصف -->
+                        <p class="description">
+                            يتميز هذا العطر رائحته الفاخرة التي تفوح بعبير الورد الفرنسي تجمع نسماته بين نعومة الورود
+                            الباريسية ولمسات من المسك الأبيض والفانيليا الناعمة لتمنحك إحساسًا بالدفء والرقي يدوم طوال
+                            اليوم
+                        </p>
+
+                        <div class="price-container ">
+                            <span class="price">280 SAR</span>
+                        </div>
+                        <button class="buy-button">
+                            <span><i class="fas fa-shopping-bag"></i></span> اضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="product-card ">
+                    <!----  /  الصورة الأصلية -->
+                    <img width="300px" height="300px   " src="images/uuuuu.jpg" alt="Perfume" class="product-image">
+
+                    <div class="product-info">
+                        <!----   /  تطبيق فئة product-title على العنوان / -->
+                        <h2 class="product-title">Violet Lavender</h2>
+
+                        <!---- /    تطبيق فئة description على الوصف /-->
+                        <p class="description">
+                            هذا العطر يتميز بنفحات من زهرة البنفسج واللافندر، مما يخلق توليفة زهرية ناعمة وأنيقة
+                        </p>
+                        <br>
+                        <div class="price-container">
+                            <span class="price">199 SAR</span>
+                        </div>
+                        <button class="buy-button">
+                            <span><i class="fas fa-shopping-bag"></i></span> اضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="product-card ">
+                    <!---- /  الصورة الأصلية -->
+                    <img width="300px" height="300px " src="images/Gold.jpg" alt="Perfume" class="product-image">
+
+                    <div class="product-info">
+                        <!--   /   تطبيق فئة product-title على العنوان / -->
+                        <h2 class="product-title"> Larmes de Rose</h2>
+
+                        <!----   /  تطبيق فئة description على الوصف / -->
+                        <p class="description">
+                            عطر أنثوي راقٍ تنبعث منه نفحات ناعمة من زهرة الماغنوليا واللوتس، ممزوجة بعبير الورد التركي،
+                            وتغلفه لمسة دافئة من المسك الأبيض وخشب الكشمير. يجسّد لحظاتك الحالمة بأناقة لا تُنسى
+                        </p>
+
+                        <div class="price-container">
+                            <span class="price">250 SAR</span>
+                        </div>
+                        <button class="buy-button">
+                            <span><i class="fas fa-shopping-bag"></i></span> اضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3"></div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="product-card ">
+                    <!---- /  الصورة الأصلية -->
+                    <img width="300px" height="300px " src="images/www.jpg" alt="Perfume" class="product-image">
+
+                    <div class="product-info">
+                        <!--   /   تطبيق فئة product-title على العنوان / -->
+                        <h2 class="product-title">Lumière Blanche </h2>
+
+                        <!----   /  تطبيق فئة description على الوصف / -->
+                        <p class="description">
+                            عطر يشبه لحظة صباحية ناعمة، حين يلامس الضوء بشرتك برقة وهدوء.
+                            يفتتح بنفحات منعشة من الكمثرى واللافندر، ثم يتعمق في قلب زهري أنيق من السوسن والورد البلغاري.
+                            تستقر رائحته على قاعدة دافئة من المسك الابيض وخشب الصندل، تترك أثرًا ناعمًا يدوم.
+
+                        </p>
+
+                        <div class="price-container">
+                            <span class="price">130 SAR </span>
+                        </div>
+                        <button class="buy-button">
+                            <span><i class="fas fa-shopping-bag"></i></span> اضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="product-card ">
+                    <!---- /  الصورة الأصلية -->
+                    <img width="300px" height="300px " src="images/yallow.jpg" alt="Perfume" class="product-image">
+
+                    <div class="product-info">
+                        <!--   /   تطبيق فئة product-title على العنوان / -->
+                        <h2 class="product-title">Or Lumi</h2>
+
+                        <!----   /  تطبيق فئة description على الوصف / -->
+                        <p class="description">
+                            عطر يفتتح بنفحات من اليوسفي واللافندر، منعشة ومحايدة
+                            يتوسطه قلب خشبي زهري من السوسن وخشب الأرز، يعكس التوازن بين القوة والرقة
+                            تستقر رائحته على قاعدة دافئة من العنبر والمسك، تترك أثرًا ناعمًا يدوم
+                        </p>
+
+                        <div class="price-container">
+                            <span class="price"> 300 SAR</span>
+                        </div>
+                        <button class="buy-button">
+                            <span><i class="fas fa-shopping-bag"></i></span> اضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="product-card ">
+                    <!---- /  الصورة الأصلية -->
+                    <img width="300px" height="300px " src="images/Blue Perfume.jpg" alt="Perfume" class="product-image">
+
+                    <div class="product-info">
+                        <!--   /   تطبيق فئة product-title على العنوان / -->
+                        <h2 class="product-title">Azure Drift</h2>
+
+                        <!----   /  تطبيق فئة description على الوصف / -->
+                        <p class="description">هذا العطر ينبض بالحياة والحيوية من البرغموت الإيطالي والنعناع الأزرق، ليمنح
+                            إحساسًا منعشًا ومتوازنًا
+                            يتناغم قلبه بنقاء زهرة اللوتس وخشب الأرز الأبيض، في انسجام بين الصفاء والدفء
+                            تتعمق رائحته بقاعدة من المسك النقي والعنبر الرمادي، تترك أثرًا هادئًا يدوم
+                        </p>
+
+                        <div class="price-container">
+                            <span class="price">180 SAR</span>
+                        </div>
+                        <button class="buy-button">
+                            <span><i class="fas fa-shopping-bag"></i></span> اضف إلى السلة
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer"
+        style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 35px 0 20px; margin-top: 30px;">
+        <div class="container">
+            <div class="row justify-content-around align-items-start text-center">
+
+                <!-- روابط سريعة -->
+                <div class="col-lg-2 col-md-3 col-sm-4 mb-4">
+                    <h6 style="font-weight: bold; margin-bottom: 18px; font-size: 16px; color: #fff;">روابط سريعة</h6>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#"
+                            style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px; transition: all 0.3s;">
+                            الرئيسية
+                        </a>
+                        <a href="#"
+                            style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px; transition: all 0.3s;">
+                            المنتجات
+                        </a>
+                        <a href="#"
+                            style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px; transition: all 0.3s;">
+                            العروض
+                        </a>
+                    </div>
+                </div>
+
+                <!-- تواصل معنا -->
+                <div class="col-lg-3 col-md-3 col-sm-4 mb-4">
+                    <h6 style="font-weight: bold; margin-bottom: 18px; font-size: 16px; color: #fff;">تواصل معنا</h6>
+                    <div class="d-flex flex-column gap-2">
+                        <div style="font-size: 14px; color: rgba(255,255,255,0.9);">
+                            <i class="fas fa-phone me-2" style="font-size: 13px;"></i>
+                            <span>0501234567</span>
+                        </div>
+                        <div style="font-size: 14px; color: rgba(255,255,255,0.9);">
+                            <i class="fas fa-envelope me-2" style="font-size: 13px;"></i>
+                            <span>info@lovelyscents.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تابعنا -->
+                <div class="col-lg-2 col-md-3 col-sm-4 mb-4">
+                    <h6 style="font-weight: bold; margin-bottom: 18px; font-size: 16px; color: #fff;">تابعنا</h6>
+                    <div class="social-links d-flex justify-content-center gap-3">
+                        <a href="#" class="social-link"
+                            style="color: white; font-size: 22px; transition: all 0.3s ease; display: inline-block;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link"
+                            style="color: white; font-size: 22px; transition: all 0.3s ease; display: inline-block;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link"
+                            style="color: white; font-size: 22px; transition: all 0.3s ease; display: inline-block;">
+                            <i class="fab fa-snapchat"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- حقوق النشر -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div style="border-top: 1px solid rgba(255,255,255,0.4); padding-top: 20px; text-align: center;">
+                        <p style="margin: 0; font-size: 14px; color: rgba(255,255,255,0.8);">
+                            &copy; 2024 Lovely Scents Store. جميع الحقوق محفوظة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // تهيئة النظام بعد تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function () {
+            // عرض المنتجات
+            const productsContainer = document.getElementById('products-container');
+            if (productsContainer && window.authSystem) {
+                window.authSystem.products.forEach(product => {
+                    const productHTML = `
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card h-100">
+                                <img src="${product.image}" class="card-img-top product-image" alt="${product.name}" 
+                                     style="height: 250px; object-fit: cover;"
+                                     onerror="this.src='https://via.placeholder.com/300x300/cccccc/969696?text=صورة+منتج'">
+                                <div class="card-body">
+                                    <h5 class="card-title product-title">${product.name}</h5>
+                                    <p class="card-text description">${product.description}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary price">${product.price} SAR</span>
+                                        <button class="btn btn-primary buy-button">
+                                            <i class="fas fa-shopping-cart"></i> شراء
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    productsContainer.innerHTML += productHTML;
+                });
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
