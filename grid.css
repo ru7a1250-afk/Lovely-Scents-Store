@@ -67,10 +67,11 @@
             text-decoration: none;
             font-weight: normal;
            align-items: center;
-           padding-left: 20px;
-           padding-right: 20px;
+           position:-0.0rem -0.0rem;
+           padding-left: 200px;
+           padding-right:   -0.0rem;
              display: flex;
-           gap: 1rem;
+           gap: 10rem;
            
 
        
@@ -373,3 +374,5 @@
                 font-size: 13px;
             }
         }
+
+ 
