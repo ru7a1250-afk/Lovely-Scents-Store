@@ -21769,7 +21769,7 @@ class AuthSystem {
                 height: 70px;
                 object-fit: cover;
                 border-radius: 8px;
-                margin-left: 15px;
+                margin-right: 15px;
             }
             
             .cart-item-details {
@@ -24183,7 +24183,7 @@ class AuthSystem {
                 height: 70px;
                 object-fit: cover;
                 border-radius: 8px;
-                margin-left: 15px;
+                margin-right: 15px;
             }
             
             .cart-item-details {
