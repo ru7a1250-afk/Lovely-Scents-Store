@@ -2599,7 +2599,7 @@ window.testCheckout = testCheckoutPage;
 
 console.log('✅ تم تحميل نظام السلة بنجاح - استخدم testCart() أو testCheckout() للاختبار');
 */
-/*// بيانات المنتجات
+// بيانات المنتجات
 const products = [
     {
         id: "1",
@@ -2959,13 +2959,16 @@ function addCartStyles() {
             .cart-item-image {
                 width: 70px;
                 height: 70px;
+                flex-shrink: 0;
                 object-fit: cover;
                 border-radius: 8px;
                 margin-left: 15px;
+                overflow: hidden;
             }
-            
+
             .cart-item-details {
                 flex: 1;
+                min-width: 0;
             }
             
             .cart-item-title {
@@ -3011,6 +3014,7 @@ function addCartStyles() {
                 border: none;
                 font-size: 18px;
                 margin-right: 10px;
+                flex-shrink: 0;
                 cursor: pointer;
             }
             
@@ -3913,7 +3917,7 @@ console.log('🎉 نظام السلة جاهز! استخدم:');
 console.log('   - testCart() لإضافة منتجات تجريبية');
 console.log('   - testCheckout() لاختبار صفحة الدفع');
 console.log('   - openCart() لفتح السلة');
-*/
+
 
 
 
